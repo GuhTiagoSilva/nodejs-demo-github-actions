@@ -5,7 +5,7 @@ on:
     branches:
       - "main"
     paths:
-      - "./user-microservice"
+      - "user-microservice/**"
   pull_request:
     branches:
       - "main"
@@ -30,6 +30,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
+          working-directory: "./user-microservice"
 
       - name: Install Dependencies
         run: npm ci
