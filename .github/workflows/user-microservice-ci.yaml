@@ -11,8 +11,8 @@ on:
       - "main"
 
 jobs:
-  
   build:
+    name: "Build and Test Order Microservice app"
     runs-on: ubuntu-latest
 
     strategy:
