@@ -30,7 +30,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-          working-directory: "./user-microservice"
 
       - name: Install Dependencies
         run: npm ci
