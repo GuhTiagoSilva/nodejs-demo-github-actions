@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - "main"
+    paths:
+      - "user-microservice/**"
   pull_request:
     branches:
       - "main"
