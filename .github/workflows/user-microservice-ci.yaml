@@ -20,9 +20,9 @@ jobs:
           fetch-depth: 0
 
       - name: Install Dependencies
-        uses: npm ci
+        run: npm ci
         working-directory: "./user-microservice"
         
       - name: Run Tests
-        uses: npm test
+        run: npm test
         working-directory: "./user-microservice"
