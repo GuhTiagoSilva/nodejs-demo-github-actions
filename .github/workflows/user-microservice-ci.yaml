@@ -5,7 +5,7 @@ on:
     branches:
       - "main"
     paths:
-      - "user-microservice/**"
+      - "./user-microservice"
   pull_request:
     branches:
       - "main"
@@ -33,6 +33,8 @@ jobs:
 
       - name: Install Dependencies
         run: npm ci
+        working-directory: "./user-microservice"
         
       - name: Run Tests
         run: npm test
+        working-directory: "./user-microservice"
