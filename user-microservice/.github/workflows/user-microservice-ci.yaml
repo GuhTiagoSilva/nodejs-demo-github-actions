@@ -16,9 +16,13 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: Install Dependencies
         uses: npm ci
+        working-directory: "./user-microservice"
 
       - name: Run Tests
         uses: npm test
+        working-directory: "./user-microservice"
