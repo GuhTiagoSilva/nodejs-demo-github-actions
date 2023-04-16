@@ -19,6 +19,8 @@ jobs:
 
       - name: Install Dependencies
         uses: npm ci
+        working-directory: "./order-microservice"
 
       - name: Run Tests
         uses: npm test
+        working-directory: "./order-microservice"
