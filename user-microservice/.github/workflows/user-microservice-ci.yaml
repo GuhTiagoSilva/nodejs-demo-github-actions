@@ -1,0 +1,22 @@
+name: User Microservice CI
+on:
+  push:
+    branches:
+      - "main"
+  pull_request:
+    branches:
+      - "main"
+
+jobs:
+  
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Install Dependencies
+        uses: npm ci
+
+      - name: Run Tests
+        uses: npm test
